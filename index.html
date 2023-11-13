@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
+    <script type="module" src="js/scripts.js"></script>
+    <title>Monster House!</title>
+</head>
+<body>
+    <header>
+        <nav class="main-navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./css/elementos/icon.png"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./mounstruos.html">MOUNSTRUOS</a></li>
+                <li><a href="./blog.html">BLOG</a></li>
+                <li><a href="./contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="halloween-form">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ingrese nombre">
+        </div>
+
+        <div class="form-group">
+            <label class="label-with-image" for="alias"><img src="./css/elementos/alias.png">Alias</label>
+            <input type="text" id="alias" placeholder="Ingrese alter-ego">
+        </div>
+
+        <div class="form-group">
+            <label class="label-with-image"><img src="./css/elementos/defensa.png">Defensa</label>
+            <div class="defensa-options">
+                <input type="radio" id="pocion" name="defensa" value="pocion">
+                <label for="pocion" class="defensa-option">POCION</label>
+
+                <input type="radio" id="crujifijo" name="defensa" value="crujifijo">
+                <label for="crujifijo" class="defensa-option">CRUCIFIJO</label>
+
+                <input type="radio" id="estaca" name="defensa" value="estaca">
+                <label for="estaca" class="defensa-option">ESTACA</label>
+
+                <input type="radio" id="plata" name="defensa" value="plata">
+                <label for="plata" class="defensa-option">PLATA</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label-with-image" for="miedo"><img src="./css/elementos/miedo.png">Miedo</label>
+            <input type="range" id="miedo" min="0" max="100" value="50">
+        </div>
+
+        <div class="form-group">
+            <label class="label-with-image" for="tipo"><img src="./css/elementos/tipo.png">Tipo</label>
+            <select id="tipo"></select>
+        </div>
+
+        <div class="form-group">
+            <button class="label-with-image" type="button" id="guardar">
+                <img src="./css/elementos/guardar.png" alt="Guardar">
+                Guardar
+            </button>
+        </div>
+    </form>
+
+    <div id="spinner" class="spinner"><i class="fa-solid fa-ghost fa-beat-fade"></i></div>
+    
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Alias</th>
+                <th>Defensa</th>
+                <th>Miedo</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./mounstruos.html">MOUNSTRUOS</a></li>
+                <li><a href="./blog.html">BLOG</a></li>
+                <li><a href="./contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2023 Monster House. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
