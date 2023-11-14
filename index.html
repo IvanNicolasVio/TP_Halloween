@@ -58,16 +58,24 @@
 
         <div class="grupo-form">
             <label class="atributo" for="miedo"><img src="./css/elementos/miedo.png">Miedo</label>
-            <input type="range" id="miedo" min="0" max="100" value="50">
+            <input type="range" id="miedo" min="0" max="100" value="50" required>
         </div>
 
         <div class="grupo-form">
             <label class="atributo" for="tipo"><img src="./css/elementos/tipo.png">Tipo</label>
-            <select id="tipo"></select>
+            <select id="tipo"></select required>
+        </div>
+
+        <div class="grupo-form">
+            <label class="atributo" for="altura">De donde salio</label>
+            <input type="checkbox" id="libro" value="Libro" >Libro
+            <input type="checkbox" id="pelicula" value="Pelicula" >Pelicula
+            <input type="checkbox" id="serie" value="Serie">Serie
+            <input type="checkbox" id="leyenda" value="Leyenda">Leyenda
         </div>
 
         <div class="botonera">
-            <button class="submit" type="button" id="guardar">
+            <button class="submit" type="submit" id="guardar">
                 <img src="./css/elementos/guardar.png">
                 Guardar
             </button>
@@ -92,6 +100,7 @@
                 <th>Defensa</th>
                 <th>Miedo</th>
                 <th>Tipo</th>
+                <th>Origen</th>
             </tr>
         </thead>
         <tbody>

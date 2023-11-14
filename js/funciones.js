@@ -22,12 +22,18 @@ export function normalizar()
   document.getElementById('eliminar').style.visibility = 'hidden';
   document.getElementById('nombre').value = '';
   document.getElementById('alias').value = '';
+  desmarcarCheckboxes();
   var radios = document.getElementsByName('defensa');
-  for (var i = 0; i < radios.length; i++) {
-    radios[i].checked = false;
-  }
+  radios[0].checked = true;
   document.getElementById('miedo').value = 50;
   document.getElementById('tipo').value = '';
+}
+
+function desmarcarCheckboxes() {
+  var checkboxes = document.querySelectorAll('input[type=checkbox]');
+  checkboxes.forEach(function(checkbox) {
+      checkbox.checked = false;
+  });
 }
 
 export function displaySpinner(display){
