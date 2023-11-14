@@ -36,6 +36,7 @@ document.getElementById('guardar').addEventListener('click', function () {
   displaySpinner(false);
 });
 
+
 function obtenerValor()
 {
   var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
