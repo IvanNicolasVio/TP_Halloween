@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilosIndex.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
-    <script type="module" src="js/scripts.js"></script>
+    <script type="module" src="js/scriptsIndex.js"></script>
     <title>Monster House!</title>
 </head>
 <body>
+
+    <div id="spinner">
+        <img src="./css/elementos/Double Ring-1s-200px.svg" id="spinner-modal">
+    </div>
+
     <header>
-        <nav class="main-navbar">
+        <nav class="navbar">
             <div class="logo">
                 <a href="./index.html"><img src="./css/elementos/icon.png"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./mounstruos.html">MOUNSTRUOS</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
-    <form id="halloween-form">
-        <div class="form-group">
+    <form id="form">
+        <div class="grupo-form">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" placeholder="Ingrese nombre">
         </div>
 
-        <div class="form-group">
-            <label class="label-with-image" for="alias"><img src="./css/elementos/alias.png">Alias</label>
+        <div class="grupo-form">
+            <label class="atributo" for="alias"><img src="./css/elementos/alias.png">Alias</label>
             <input type="text" id="alias" placeholder="Ingrese alter-ego">
         </div>
 
-        <div class="form-group">
-            <label class="label-with-image"><img src="./css/elementos/defensa.png">Defensa</label>
+        <div class="grupo-form">
+            <label class="atributo"><img src="./css/elementos/defensa.png">Defensa</label>
             <div class="defensa-options">
                 <input type="radio" id="pocion" name="defensa" value="pocion">
                 <label for="pocion" class="defensa-option">POCION</label>
@@ -50,25 +55,34 @@
                 <label for="plata" class="defensa-option">PLATA</label>
             </div>
         </div>
-        <div class="form-group">
-            <label class="label-with-image" for="miedo"><img src="./css/elementos/miedo.png">Miedo</label>
+
+        <div class="grupo-form">
+            <label class="atributo" for="miedo"><img src="./css/elementos/miedo.png">Miedo</label>
             <input type="range" id="miedo" min="0" max="100" value="50">
         </div>
 
-        <div class="form-group">
-            <label class="label-with-image" for="tipo"><img src="./css/elementos/tipo.png">Tipo</label>
+        <div class="grupo-form">
+            <label class="atributo" for="tipo"><img src="./css/elementos/tipo.png">Tipo</label>
             <select id="tipo"></select>
         </div>
 
-        <div class="form-group">
-            <button class="label-with-image" type="button" id="guardar">
-                <img src="./css/elementos/guardar.png" alt="Guardar">
+        <div class="botonera">
+            <button class="submit" type="button" id="guardar">
+                <img src="./css/elementos/guardar.png">
                 Guardar
+            </button>
+
+            <button class="modificar" type="button" id="modificar">
+                <img src="./css/elementos/modificar.png" >
+                Modificar
+            </button>
+
+            <button class="eliminar" type="button" id="eliminar">
+                <img src="./css/elementos/borrar.png">
+                Eliminar
             </button>
         </div>
     </form>
-
-    <div id="spinner" class="spinner"><i class="fa-solid fa-ghost fa-beat-fade"></i></div>
     
     <table id="tabla">
         <thead>
@@ -86,12 +100,12 @@
     </table>
 
     <footer>
-        <nav class="footer-nav">
+        <nav class="footer">
             <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./mounstruos.html">MOUNSTRUOS</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
             </ul>
         </nav>
         <p>&copy; 2023 Monster House. Todos los derechos reservados.</p>

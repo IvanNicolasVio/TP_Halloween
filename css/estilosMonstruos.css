@@ -15,19 +15,12 @@ header {
     padding: 3px 0;
 }
 
-.main-navbar {
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 .nav-links, .nav-links li {
@@ -72,7 +65,7 @@ label {
     margin-bottom: 5px;
 }
 
-#monstruo-form-container {
+#container-monstruos {
     max-width: 600px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -82,18 +75,18 @@ label {
     padding: 20px;
 }
 
-#monstruo-form-container form {
+#container-monstruos form {
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
 
-#monstruo-form-container label {
+#container-monstruos label {
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-#monstruo-form-container input, #monstruo-form-container select {
+#container-monstruos input, #container-monstruos select {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -103,12 +96,15 @@ label {
 footer {
     background: url('./elementos/navbarback.jpg') center/cover no-repeat;
     text-align: center;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    left: 0;
     bottom: 0;
+    height: 2.3%;
+    width: 100%;
+    padding: 10px;
 }
 
 .footer-nav ul {
@@ -127,21 +123,54 @@ footer {
     text-decoration: none;
 }
 
+#spinner-modal{
+    width: 20%;
+    height: 40%;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position:relative;
+    display:block;
+    opacity: 1;
+    bottom: 200px;
+}
+
+#spinner{
+    background-color: rgb(187, 183, 183, 0.5);
+    position:fixed;
+    z-index: 2;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: block;
+}
+
 @media (max-width: 768px) {
-    .main-navbar {
+    .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .nav-links {
         margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 
-    form {
-        max-width: 90%;
+    .nav-links li:not(:last-child) {
+        margin-right: 10px;
     }
+    
+    form {
+        max-width: 60%;
+    }
+    
+    body{
+        overflow-x: hidden;
+    }
+
 }

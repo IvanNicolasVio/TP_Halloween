@@ -1,6 +1,8 @@
+import {displaySpinner} from './funciones.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const formularioContainer = document.getElementById('monstruo-form-container');
+    displaySpinner(true);
+    const formularioContainer = document.getElementById('container-monstruos');
     const monstruosGuardados = JSON.parse(localStorage.getItem('listaMonstruos')) || [];
     monstruosGuardados.forEach(monstruo => {
         const formulario = document.createElement('form');
@@ -13,10 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function agregarCampoAlFormulario(formulario, etiqueta, valor) {
-
         const etiquetaElemento = document.createElement('label');
         etiquetaElemento.textContent = `${etiqueta}: ${valor}`;
         formulario.appendChild(etiquetaElemento);
-
     }
+    displaySpinner(false);
 });
